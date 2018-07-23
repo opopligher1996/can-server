@@ -1,0 +1,21 @@
+{
+  "streams": {
+    "8888888888888888~cpods~e7@dih": {
+      "name": "test",
+      "location": "E7/DIH",
+      "alerts": [
+        {
+          "type": "pushover",
+          "users": "config/users/cpods.pushover_users.json",
+          "template": "config/templates/cpods.pushover.yml.erb",
+          "min_interval_m": null,
+          "prev_alert_time": null,
+          "enable": true,
+          "schedules" : { "active": [["05:00","01:30"]] }
+        }
+      ],
+      "ignores": [
+      ]
+    }
+  }
+}

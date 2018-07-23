@@ -1,0 +1,29 @@
+{
+  "streams": {
+    "c8ea8877fd6f3598~alpr~": {
+      "name": "p17-1",
+      "location": "lin Ma Hung",
+      "alerts": [
+        {
+          "type": "sms",
+          "enable": true,
+          "users": "config/users/sms_users.json",
+          "template": "config/templates/sms.yml.erb",
+          "min_interval_m": null,
+          "prev_alert_time": null
+        },
+        {
+          "type": "pushover",
+          "enable": true,
+          "users": "config/users/pushover_users.json",
+          "template": "config/templates/pushover.yml.erb",
+          "min_interval_m": null,
+          "prev_alert_time": null
+        }
+      ],
+      "ignores": [
+        "event.data.vehicles[0].plate_number==\"TP5623\""
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+message: |
+  Lin Ma Hung Vehicle Detection Alert
+  <% event.data.vehicles.each do |v| %>
+  Time: <%= Time.parse(event.c_at).strftime("%a %Y-%m-%d %H:%M") %>
+  Vehicle Type: <%= v.type %>
+  License Plate: <%= v.plate_number %>
+  <%= LinkShrink.shrink_url event.images[v.image_index].url %>
+  <% end %>

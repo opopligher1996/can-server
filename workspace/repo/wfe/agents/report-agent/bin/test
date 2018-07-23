@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# test (watergauge|flood1|flood2)
+docker-compose exec report test/push-event.rb $1

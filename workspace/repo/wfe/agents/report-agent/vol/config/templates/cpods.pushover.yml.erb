@@ -1,0 +1,13 @@
+<% obj = event.data.objects.first %>
+title: |
+  Creaxon Technologies
+  Comb Plate Obstacle Detection
+message: |
+  Location: E7-Top Landing / DIH
+  Time: <%= Time.parse(event.c_at).strftime("%a %Y-%m-%d %H:%M") %>
+  Object Type: <%= obj.type %>
+  <% roi = obj.bbox %>
+attachment: <%= event.images[0].url %>
+<% if roi %>roi: <%= roi %><% end %>
+<% if roi %>resize: [640,480]<% end %>
+<% if roi %>tobox: [10,270,200,200]<% end %>

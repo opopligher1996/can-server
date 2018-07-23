@@ -1,0 +1,4 @@
+vol/**/.env
+vol/**/.env.*
+vol/**/log
+capistrano/log

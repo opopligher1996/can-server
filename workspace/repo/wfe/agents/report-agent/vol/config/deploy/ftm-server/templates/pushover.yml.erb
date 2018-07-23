@@ -1,0 +1,10 @@
+title: Vehicle Detection
+message: |
+  <% event.data.vehicles.each_with_index do |v,i| %>
+  Time: <%= Time.parse(event.c_at).strftime("%a %Y-%m-%d %H:%M") %>
+  Vehicle Type: <%= v.type %>
+  <% if v.plate_number %>License Plate: <%= v.plate_number %><% end %>
+  <% roi = v.plate_bbox if roi.nil? && v.plate_bbox %>
+  <% end %>
+attachment: <%= event.images[0].url %>
+<% if roi %>roi: <%= roi %><% end %>

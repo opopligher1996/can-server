@@ -1,0 +1,14 @@
+version: '3'
+services:
+  report:
+    build: docker/report
+    environment:
+        - TZ=Hongkong
+    volumes:
+        - ./docker/report:/home/creaxon/report-agent
+        - ./vol/config:/home/creaxon/report-agent/config
+        - ./vol/log:/home/creaxon/report-agent/log
+        - ./vol/report:/home/creaxon/report-agent/report
+    tty: true
+    stdin_open: true
+    restart: always

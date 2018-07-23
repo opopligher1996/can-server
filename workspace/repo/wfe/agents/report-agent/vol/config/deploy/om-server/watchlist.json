@@ -1,0 +1,40 @@
+{
+  "streams": {
+
+    "c8ea88c91696a251~cpods~e7@dih": {
+      "name": "p18-1",
+      "location": "DIH/E7/L",
+      "alerts": [
+        {
+          "type": "pushover",
+          "users": "config/users/cpods.pushover_users.json",
+          "template": "config/templates/cpods.pushover.yml.erb",
+          "min_interval_m": null,
+          "prev_alert_time": null,
+          "enable": true,
+          "schedules" : { "active": [["05:00","01:30"]] }
+        }
+      ],
+      "ignores": []
+    },
+
+    "c8ea88fe50fb619b~cpods~e7@dih": {
+      "name": "p18-2",
+      "location": "DIH/E7/R",
+      "alerts": [
+        {
+          "type": "pushover",
+          "users": "config/users/cpods.pushover_users.json",
+          "template": "config/templates/cpods.pushover.yml.erb",
+          "min_interval_m": null,
+          "prev_alert_time": null,
+          "enable": true,
+          "schedules" : { "active": [["05:00","01:30"]] }
+        }
+      ],
+      "ignores": []
+    }
+
+
+  }
+}
